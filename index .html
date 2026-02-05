@@ -29,7 +29,7 @@ button:hover {
 }
 .card {
   background-color: rgb(192, 95, 95);
-  width: 220px;
+  width: 270px;
   margin-top: 10px;
   padding: 10px;
   border-radius: 10px;
@@ -44,13 +44,14 @@ button:hover {
   font-size: 18px;
   margin-top: 10px;
 }
+
 </style>
-
-
-
-    </style>
   </head>
   <body>
+    
+   <h1> <u> Food Recipe Search</u></h1>
+   <p>Food recipe search tools allow users to find cooking inspiration by inputting specific ingredients, dietary preferences, or dish types,</p>
+   <hr>
     <form
       onsubmit="
         searchMeal();
@@ -79,11 +80,18 @@ button:hover {
             (ml) =>
               (mealShowRef.innerHTML =
                 mealShowRef.innerHTML +
-    `<div class="card"> 
-   <img src="${ml.strMealThumb}" class="meal-img"/>
+ `<div class="card"> 
+    <img src="${ml.strMealThumb}" class="meal-img"/>
    <h2>${ml.strMeal}</h2>
-    
-    </div>
+  <h2> ${ml.strArea}</h2>
+<p>${ml.strCategory}</p>
+ <ul>
+      <li>${ml.strIngredient1}</li>
+      <li>${ml.strIngredient2}</li>
+      <li>${ml.strIngredient3}</li>
+      <li>${ml.strIngredient4}</li>
+    </ul>
+ <a href="${ml.strYoutube}">strYoutube</a>
     `),
           );
         } catch (err) {
@@ -94,3 +102,7 @@ button:hover {
     </script>
   </body>
 </html>
+
+
+
+

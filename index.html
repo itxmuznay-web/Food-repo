@@ -4,51 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-
-      <style>
-
-#mealname {
-  padding: 10px;
-  width: 250px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
-}
-button {
-  padding: 10px 20px;
-  margin-left: 10px;
-  border: none;
-  background-color: #ff6b6b;
-  color: white;
-  font-size: 16px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-button:hover {
-  background-color: #ff4c4c;
-}
-.card {
-  background-color: rgb(192, 95, 95);
-  width: 270px;
-  margin-top: 10px;
-  padding: 10px;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-.meal-img {
-  width: 100%;
-  border-radius: 8px;
-}
-.card h2 {
-  font-size: 18px;
-  margin-top: 10px;
-}
-
-</style>
+    <link rel="stylesheet" href="index.css">
   </head>
   <body>
-    
+    <div class="body">
+      <nav>
+  <a href="#">Home</a>
+  <a href="#">About</a>
+  <a href="#">Contact</a>
+</nav>
+
    <h1> <u> Food Recipe Search</u></h1>
    <p>Food recipe search tools allow users to find cooking inspiration by inputting specific ingredients, dietary preferences, or dish types,</p>
    <hr>
@@ -62,7 +27,7 @@ button:hover {
       <input type="text" name="mealname" id="mealname" />
       <button>Search</button>
     </form>
-    <div id="meals-show"></div>
+    <div id="meals-show"></div></div>
     <script>
       async function searchMeal() {
         try {
@@ -73,7 +38,7 @@ button:hover {
           );
           const dataFromAPI = await mealsAPIRef.json();
           const mealsFromApi = dataFromAPI.meals;
-          console.log(mealsFromApi);
+          //console.log(mealsFromApi);
           const mealShowRef = document.querySelector("#meals-show");
            mealShowRef.innerHTML=""
           mealsFromApi.map(

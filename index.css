@@ -96,3 +96,49 @@ button:hover {
   padding: 8px 12px;
   border-radius: 5px;
 }
+.whatsapp{
+ height: 100px;
+ width: 100px;
+display: flex;
+flex-direction: column;
+position: fixed;
+bottom: 50px;
+gap: 10px;
+border-radius: 50%;         
+  background-color: #25D366; 
+}
+.whatsapp:hover{
+  transform: scale(1.1);         
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  cursor: pointer;
+}
+.js{
+  height: 45px;
+ width: 50px;
+display: flex;
+left: 15px;
+flex-direction: column;
+position: fixed;
+bottom: 150px;
+border-radius: 50%;    
+}
+.js:hover{
+   transform: scale(1.1);         
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  cursor: pointer;
+}
+.insta{
+   height: 30px;
+ width: 50px;
+display: flex;
+left: 15px;
+flex-direction: column;
+position: fixed;
+bottom: 200px;
+border-radius: 50%;  
+}
+.insta:hover{
+   transform: scale(1.1);         
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  cursor: pointer;
+}
